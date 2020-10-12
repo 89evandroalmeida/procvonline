@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "cabecalho"
+                "conteudo"
+                "periferico"
+                "rodape";
+  grid-gap: 5px 0px;
+}
+
+header {
+  grid-area: cabecalho;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.content {
+  grid-area: conteudo;
+}
+
+.menu-principal {
+  display: block;
+}
+
+.menu-principal > ul {
+  list-style: none;
+  background: lightgray;
+  padding: 5px;
+}
+
+.menu-principal > ul > li {
+  display: block;
+  padding: 10px;
+  background: white;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+.menu-principal > ul > li:hover {
+  background: blue;
+  color: white;
+}
+
+aside {
+  grid-area: periferico;
+}
+
+aside > .box-lateral {
+  background: lightgray;
+  box-shadow: 2px 2px gray;
+  padding-bottom: 20px;
+}
+
+.box-noticia p, .box-noticia h2 {
+  margin-top: 2px;
+}
+.box-noticia h2 {
+  margin-bottom: 0;
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 150px 1fr 120px;
+    grid-template-areas: "cabecalho cabecalho"
+                              "conteudo conteudo"
+                              "rodape rodape";
+    grid-gap: 5px 20px;
+  }
+  .logo {
+    width: 220px;
+    float:left;
+  }
+  .menu-principal {
+    float:right;
+  }
+  .menu-principal > ul > li {
+    display: inline-block;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .content > .box-noticia {
+    width: 30%;
+    min-width: 250px;
+    flex-grow: 2;
+  }
+}
+
+
+.source-content {
+  height: 20em;
+  witdh: 100%;
+  overflow-y: scroll;
+  border: solid gray 1px;
+}
+
+.source-content > output {
+
+}

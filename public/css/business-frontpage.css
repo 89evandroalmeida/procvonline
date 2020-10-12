@@ -1,0 +1,17 @@
+/*!
+ * Start Bootstrap - Business Frontpage (https://startbootstrap.com/templates/business-frontpage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+p { text-align: justify }
+
+.source-content {
+  height: 10em;
+  witdh: 100%;
+  overflow-y: scroll;
+  border: solid gray 1px;
+}

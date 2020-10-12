@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Gerador online de PROCV">
+  <meta name="author" content="Evandro Almeida">
+  <meta name="keywords"
+        content="procv,online,gerador,generator,conversor,converter">
+  <script data-ad-client="ca-pub-1234567890123456"
+          async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <title>PROCV Online</title>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/business-frontpage.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">&nbsp;</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <!--<ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>-->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-primary py-2 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">PROCV Online</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <h2>Como funciona?</h2>
+        <hr>
+        <p>Muitas vezes tudo o que precisamos é que todas as informações estejam num arquivo só, né? Esta ferramenta ajuda você
+          a unir informações que estão separadas em arquivos diferentes.
+        </p>
+        <p>Primeiro, carregue o arquivo "principal" no campo (1), que é o que vai receber as informações de outro lugar. 
+          Depois, carregue o arquivo "complementar" com as outras informações no campo (2).</p> 
+        <p>Deixe-me dar uma exemplo: você tem uma lista de contatos com e-mails e nomes em um arquivo. Você tem uma outra lista com e-mails, 
+          telefones, endereços etc. Em comum entre esses arquivos está o e-mail, que é o identificador único. Você pode, então, gerar um arquivo
+          só com todos esses dados. Experimente!      
+        </p>   
+      </div>
+      </div>
+
+
+    <!-- /.row -->
+
+    <div class="row">
+      <div class="col-md-6 mb-8">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">1) Carregue o arquivo principal (em CSV)</h4>          
+            <input id="source1" type="file" oninput="loadSource(1)">
+            <p class="card-text mt-3">
+              Qual deve ser o campo identificador para a comparação com o outro arquivo,
+              aquele comum entre os dois?
+              <div id="key-selection-area">
+                <select id="key-selection" class="custom-select"></select>
+              </div>
+            </p>
+          </div>
+          <div class="card-footer source-content">
+            <output id="source1-content" disabled="disabled"></output>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-8">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">2) Carregue o arquivo complementar (em CSV)</h4>        
+            <input id="source2" type="file" oninput="loadSource(2)">
+            <p class="card-text mt-3">
+              Ah, detalhe! Se o campo chave escolhido no arquivo principal não existir neste aqui também, 
+              nenhuma das informações deste será carregada :/            
+            </p>
+          </div>
+          <div class="card-footer source-content">
+            <output id="source2-content" disabled="disabled"></output>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row m-xl-5">
+      <div class="col-md-12 text-center">
+        <a class="btn btn-primary btn-lg" href="#" onclick="runProcv()" >RODAR PROCV
+          &raquo;</a>
+        <a id="download" style="display: none"></a>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Codado por
+         <a href="https://linkedin.com/in/evandromalmeida" target="_blank"> Evandro Almeida </a> - 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+  <script>
+   
+  </script>
+</body>
+
+</html>
